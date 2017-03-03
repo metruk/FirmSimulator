@@ -10,7 +10,7 @@ public class Main {
 		//file for writing weekly report
     	String filename = "zp.csv";
     	
-        FirmManipulator firm = new FirmManipulator(filename);
+        FirmManipulator firm = new FirmManipulator(filename, 10, 100);
         //getting firm workers
         ArrayList<Employee> firmWorkers =firm.getEmployeeFactory();
         //working process modeling

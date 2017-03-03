@@ -4,22 +4,22 @@ import java.util.ArrayList;
 
 public class FirmManipulator {
 
-    final private static int MINIMUM_EMPLOYERS=10;
-    final private static int MAXIMUM_EMPLOYERS=15;
+     private static int minimumEmployees;
+     private static int maximumEmployees;
     final private static  String [] MANDATORY_WORKERS={
     		"director",
     		"bookeper",
     		"manager"
     };
     final private static int AMOUNT_OF_WEEKS_IN_MONTH = 4;
-    
     private static  String filename;
-    
     private static Randomizer random = new Randomizer();
 
     private static XmlWorker xml = new XmlWorker();
-    FirmManipulator(String filename){
-    	this.filename = filename;	
+    FirmManipulator(String filename, int minimumEmployees, int maximumEmployees){
+    	this.filename = filename;
+    	this.minimumEmployees = minimumEmployees;
+    	this.maximumEmployees = maximumEmployees;
     }
     //for all workers make hours left to work = 8 
     void restoreWorkersHourAbility(ArrayList<Employee> emp){
@@ -80,7 +80,7 @@ public class FirmManipulator {
     //generating list of workers
     ArrayList<Employee> getEmployeeFactory() {
         
-    	int employers = random.randomNumber(MINIMUM_EMPLOYERS,MAXIMUM_EMPLOYERS);
+    	int employers = random.randomNumber(minimumEmployees,maximumEmployees);
         ArrayList<Employee> employees = new ArrayList<Employee>();
 
         for(int i = 0; i < employers; i++){
