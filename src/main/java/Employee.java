@@ -19,7 +19,6 @@ public class Employee {
 
         this.name = rnd.randomCharName(8);
         this.surname = rnd.randomCharName(7);
-        
         this.profession = xml.getVacancy();
         if(this.profession.contains("director")){
         	this.hourSalary = directorSalary;
@@ -36,7 +35,7 @@ public class Employee {
         
     }
     
-
+    //note director will earn 0 money - system feature
 	public Employee(String proffesion) {
 
         this.name = rnd.randomCharName(8);
