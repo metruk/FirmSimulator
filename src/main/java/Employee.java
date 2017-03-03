@@ -8,6 +8,9 @@ public class Employee {
     private int workingHour;
     private double moneyEarned;
     boolean isAbleTowork;
+    private double directorSalary = 1050;
+    private double bookeperSalary = 500;
+    private double managerSalary = 600;
     
    static Randomizer rnd = new Randomizer();
    static XmlWorker xml = new XmlWorker();
@@ -16,8 +19,17 @@ public class Employee {
 
         this.name = rnd.randomCharName(8);
         this.surname = rnd.randomCharName(7);
-        this.hourSalary = rnd.randomNumber(75,100);
+        
         this.profession = xml.getVacancy();
+        if(this.profession.contains("director")){
+        	this.hourSalary = directorSalary;
+        }else if(this.profession.contains("bookeper")){
+        	this.hourSalary = bookeperSalary;
+        }else if(this.profession.contains("manager")){
+        	this.hourSalary = managerSalary;
+        }else{
+        	this.hourSalary = rnd.randomNumber(75,100);
+        }
         this.workingHour = WORKING_HOURS;
         this.moneyEarned = 0;
         this.isAbleTowork = true;  
