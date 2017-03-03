@@ -22,21 +22,21 @@ public class FirmManipulator {
     	this.maximumEmployees = maximumEmployees;
     }
     //for all workers make hours left to work = 8 
-    void restoreWorkersHourAbility(ArrayList<Employee> emp){
+  private void restoreWorkersHourAbility(ArrayList<Employee> emp){
     	int wholeDayworkingHours = 8;
     	for(int i=0;i<emp.size();i++) {
     		emp.get(i).setWorkingHour(wholeDayworkingHours);
         }
     }
     
-    void clearWorkersWeeklySalary(ArrayList<Employee> emp){
+  private  void clearWorkersWeeklySalary(ArrayList<Employee> emp){
     	for(int i=0;i<emp.size();i++) {
     		emp.get(i).setClearMoneyEarned();
         }
     }
     
     //detecting indexes of Profession name in Array List pf workers
-    ArrayList<Integer> detectWorkerIndexes(ArrayList<Employee> emp,String vacancyForDetecting){
+  private  ArrayList<Integer> detectWorkerIndexes(ArrayList<Employee> emp,String vacancyForDetecting){
     	ArrayList<Integer> indexSaver = new ArrayList<Integer>();
     	for(int i=0;i<emp.size();i++) {
     		if(emp.get(i).getProfession().contains(vacancyForDetecting)){
@@ -47,7 +47,7 @@ public class FirmManipulator {
     }
     
     //checking if bookeeper, manager, director are present in list of workers and adding if no
-    void mandatoryEmployeeChecker(ArrayList<Employee> employees,String vacancy){
+   private void mandatoryEmployeeChecker(ArrayList<Employee> employees,String vacancy){
     	boolean isWokerExists = false;
     	
     	for(int i=0;i<employees.size();i++){
@@ -62,7 +62,7 @@ public class FirmManipulator {
     }
     
     //deleting director, manager, bookeper if present more then 1 vacancy for each of them
-    ArrayList<Employee> deleteDublicateByIndex(ArrayList<Employee> emp,ArrayList<Integer> duplicatedVacancies){
+   private ArrayList<Employee> deleteDublicateByIndex(ArrayList<Employee> emp,ArrayList<Integer> duplicatedVacancies){
 
     	if(duplicatedVacancies.size()>1){
     		
@@ -98,7 +98,6 @@ public class FirmManipulator {
         
         return employees;
     }
-
 
 
     void WorkingProcessSimulator(ArrayList<Employee> emloyees) throws IOException{

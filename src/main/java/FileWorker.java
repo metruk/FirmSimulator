@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class FileWorker {
 	
-	void appender(String filename,BufferedWriter bw) throws IOException{
+	 void appender(String filename,BufferedWriter bw) throws IOException{
 		PrintWriter out = new PrintWriter(bw);		
 	}
 	
