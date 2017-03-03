@@ -31,7 +31,7 @@ public class FirmManipulator {
     
     void clearWorkersWeeklySalary(ArrayList<Employee> emp){
     	for(int i=0;i<emp.size();i++) {
-    		emp.get(i).setMoneyEarned(0);
+    		emp.get(i).setClearMoneyEarned();
         }
     }
     
@@ -212,6 +212,9 @@ public class FirmManipulator {
 			bw = file.getWeeklyContent(i, freelancers, filename);
 			file.appender(filename,bw);
 			
+			//clear earned money for the week
+			clearWorkersWeeklySalary(emloyees);
+
 		}
 
     }

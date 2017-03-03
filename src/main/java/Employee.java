@@ -118,6 +118,10 @@ public class Employee {
 	public void setMoneyEarned(double moneyEarned) {
 		this.moneyEarned += moneyEarned;
 	}
+	
+	public void setClearMoneyEarned() {
+		this.moneyEarned = 0;
+	}
 
 
 	public static XmlWorker getXml() {
