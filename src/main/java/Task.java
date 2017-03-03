@@ -27,6 +27,4 @@ public class Task {
 		return "Task [taskName=" + taskName + ", taskForTask=" + timeForTask + "]";
 	}
 
-	
-
 }

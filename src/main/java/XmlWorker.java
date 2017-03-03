@@ -97,13 +97,11 @@ XmlWorker(){
            for (int temp = 0; temp < nList.getLength(); temp++) {
 
                Node nNode = nList.item(temp);
-
                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
                    Element eElement = (Element) nNode;
 
                    String vacancy= eElement.getElementsByTagName("vacancy").item(0).getTextContent();
-
                    workerVacancies.add(vacancy);
 
                }

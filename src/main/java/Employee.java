@@ -133,12 +133,5 @@ public class Employee {
 					+ ", moneyEarned=" + moneyEarned + ", isAbleTowork=" + isAbleTowork 
 					 + "]";
 		}
-
-
-
-
-
-	
-    
    
 }
